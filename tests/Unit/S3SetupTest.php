@@ -36,8 +36,10 @@ class S3SetupTest extends TestCase
         $chat->addMedia($pathToFile)
             ->preservingOriginal()
             ->toMediaCollection();
+        $chat->user_id = 1;
         $chat->messagetype=1;
         $chat->messagetext="testCase";
+
         $chat->save();
 
         $retrievechat = Chat::where('messagetext',  'testCase')->first();

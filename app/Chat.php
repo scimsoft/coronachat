@@ -39,4 +39,9 @@ class Chat extends Model implements HasMedia
     protected $casts = [
 
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

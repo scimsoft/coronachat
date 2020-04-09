@@ -15,6 +15,10 @@ class CreateChatsTable extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->decimal('long', 10, 7)->nullable();
+            $table->decimal('lat', 10, 7)->nullable();
+            $table->string('ip_address', 39)->nullable();
 
             $table->integer('messagetype');
             $table->string('messagetext');
@@ -22,8 +26,14 @@ class CreateChatsTable extends Migration
 
 
 
+
             $table->timestamps();
         });
+//        Schema::table('chats', function ( $table) {
+//            $table->foreign('user_id')
+//                ->references('id')
+//                ->on('users');
+//        });
     }
 
     /**
