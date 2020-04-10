@@ -20,6 +20,10 @@ class CreateChatsTable extends Migration
             $table->decimal('lat', 10, 7)->nullable();
             $table->string('ip_address', 39)->nullable();
 
+            $table->integer('likes')->nullable();
+            $table->integer('dislikes')->nullable();
+
+
             $table->integer('messagetype');
             $table->string('messagetext');
 

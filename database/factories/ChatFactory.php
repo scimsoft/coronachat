@@ -10,7 +10,9 @@ $factory->define(Chat::class, function (Faker $faker) {
     return [
         //
 
-    'messagetype' => $faker->randomDigit,
-    'messagetext' => $faker->text(200),
+        'messagetype' => $faker->randomDigit,
+        'messagetext' => $faker->text(200),
+        'likes' => $faker->randomDigit,
+        'dislikes' => $faker->randomDigit,
     ];
 });

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Increment number of likes of a tweet
+Route::post('/like/{id}', 'ChatController@like')->name('like');
+Route::post('/dislike/{id}', 'ChatController@dislike')->name('dislike');
