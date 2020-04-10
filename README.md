@@ -22,7 +22,7 @@ Demo page will be available soon.
 - S3 account
 
 
-1. Copy and edit .env.example
+1. Copy and edit .env.template
 2. Composer install
 3. Artisan Migrate (opcional seed)
 4. run phpunit
