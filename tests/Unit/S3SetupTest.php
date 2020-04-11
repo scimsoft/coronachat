@@ -31,7 +31,7 @@ class S3SetupTest extends TestCase
     public function testS3addMedia()
     {
 
-        $pathToFile= "public/images/icons/icon-72x72.png";
+        $pathToFile= "public/images/icons/icon-96x96.png";
         $chat = new Chat();
         $chat->addMedia($pathToFile)
             ->preservingOriginal()
